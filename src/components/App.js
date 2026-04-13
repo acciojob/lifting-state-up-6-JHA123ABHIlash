@@ -8,7 +8,8 @@ const App = () => {
   const [todos,setTodos]=useState(data);
 console.log(todos);
   function handleComplete(id){
-    setTodos(todos.map((todo,idx)=>(idx ===id ? {...todo,status:false}:todo)));
+    let updatedTodo=todos.map((todo,idx)=>(idx ===id ? {...todo,status:false }:todo));
+    setTodos(updatedTodo);
   }
   return (
     <div>

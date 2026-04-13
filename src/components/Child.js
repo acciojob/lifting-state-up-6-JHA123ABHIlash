@@ -10,7 +10,7 @@ export default function Child({todos,handleComplete}) {
         <ul>
             {todos.map((todo, idx)=>(
                 <li key={idx}>{todo.todo}
-                {todo.status ? <button onClick={()=>handleComplete(idx)}>Complete</button>:null}
+                {todo.status && <button onClick={()=>handleComplete(idx)}>Complete</button>}
                 
                 </li>
             ))}
