@@ -8,7 +8,8 @@ const App = () => {
   const[todos,setTodos]=useState([{id:1,todo:"Learn React"},{id:2,todo:"Build a React app"},{id:3,todo:"Deploy the React app"}]);
 
   function handleComplete(id){
-    todos.filter((el,idx)=>(idx !==id));
+    const updated=todos.filter((el,idx)=>(idx !==id));
+    setTodos(updated);
   }
 
   return (
