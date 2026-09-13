@@ -1,12 +1,18 @@
-import React, { useState } from "react"
+import React from "react"
 
 export default function Todo({todos,handleComplete}){
     
     return(
-       <ul>
-         {todos.map((el)=>(
-            <li key={el.id}> {el.todo} <button onClick={()=>handleComplete(el.id)}>Complete</button></li>
-         ))}
-       </ul>
+         <ul>
+
+             <h2>Child Component</h2>
+
+            {todos.map((el)=>(
+              <li key={el.id}> {el.todo}
+                  {el.status && <button onClick={()=>handleComplete(el.id)}>Complete</button>}
+              </li>
+            ))}
+         </ul>
+      
     )
 }
